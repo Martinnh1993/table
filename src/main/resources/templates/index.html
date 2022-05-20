@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employees</title>
+</head>
+<body>
+<div align="center">
+    <h1>Employees List</h1>
+    <table border="1">
+        <thead>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Date of Birth</th>
+            <th>Phone Nr</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>Job Title</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="employee: ${listOfEmployees}">
+
+            <td th:text="${employee.firstname}"></td>
+            <td th:text="${employee.lastname}"></td>
+            <td th:text="${employee.dob}"></td>
+            <td th:text="${employee.phone-nr}"></td>
+            <td th:text="${employee.email}"></td>
+            <td th:text="${employee.address}"></td>
+            <td th:text="${employee.city}"></td>
+            <td th:text="${employee.job_title}"></td>
+
+        </tr>
+
+        </tbody>
+
+    </table>
+</div>
+
+</body>
+</html>
